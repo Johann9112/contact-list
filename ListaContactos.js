@@ -51,3 +51,7 @@ function agregarContacto(id, nombre, apellido, telefono, ciudad, direccion) {
       console.log(listaContactos);
   
   }
+
+
+  // crea una funcion para actualizar un contacto existente
+  
