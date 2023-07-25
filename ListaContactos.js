@@ -54,4 +54,23 @@ function agregarContacto(id, nombre, apellido, telefono, ciudad, direccion) {
 
 
   // crea una funcion para actualizar un contacto existente
-  
+
+
+  function actualizarContacto(id, nuevosDatos) {
+    listaContactos = listaContactos.map((contacto) =>
+      contacto.id === id ? { ...contacto, ...nuevosDatos } : contacto
+    );
+
+    imprimirConsola(listaContactos);
+  }
+
+
+  actualizarContacto(1017, {
+    nombre: "Johnn",
+    apellido: "Briceño",
+    telefono: "78910",
+    ubicaciones: {
+      ciudad: "Bogota",
+      direccion: "Kennedy",
+    },
+  });
